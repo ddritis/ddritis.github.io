@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Denis - Senior ICT Specialist & Infrastructure Lead Portfolio">
+    <title>Denis | Senior ICT Specialist</title>
+    <style>
+        /* CSS Variables for consistent theming */
+        :root {
+            --bg-color: #f4f5f7;
+            --text-primary: #333333;
+            --text-secondary: #555555;
+            --accent-color: #0056b3;
+            --container-bg: #ffffff;
+            --border-color: #dddddd;
+            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        /* Basic Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--container-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 2.5rem;
+            color: var(--text-primary);
+            margin-bottom: 5px;
+        }
+
+        h2.headline {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 500;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+
+        /* Lists and layout */
+        ul {
+            list-style-type: none;
+            margin-bottom: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        /* Specific sections */
+        .pgp-key {
+            background-color: var(--bg-color);
+            padding: 10px 15px;
+            border-left: 4px solid var(--accent-color);
+            font-family: monospace;
+            font-size: 0.95rem;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .experience-item {
+            margin-bottom: 20px;
+        }
+
+        .experience-title {
+            font-weight: bold;
+            color: var(--text-primary);
+        }
+
+        .experience-meta {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>Denis</h1>
+            <h2 class="headline">Senior ICT Specialist & Infrastructure Lead | LPIC-2 & CCNA | Systems & Security Management</h2>
+        </header>
+
+        <!-- About Section -->
+        <section id="about">
+            <p>At the core of my work there is a mindset that has guided me from the beginning: <em>just for fun</em>. Curiosity to understand how systems behave, why they fail, and how to make them reliable has shaped my professional path.</p>
+            
+            <p>I am an ICT professional with broad experience in system administration, networking, security and industrial integration. My career developed in small and medium-sized environments where autonomy, diagnostic capability and full lifecycle management of technical systems are essential.</p>
+            
+            <p>Over time, I expanded my competencies into embedded Linux systems (Yocto, ARM) and PLC programming, building a practical understanding of how IT, OT and industrial automation interact. I am comfortable analyzing technical architectures, stabilizing complex environments and designing reliable solutions with a strong focus on operational continuity.</p>
+            
+            <p>In recent years, I also discovered a strong inclination for technical training: explaining complex concepts, supporting new technicians and making internal system logic understandable have become a natural part of my professional profile. Knowledge transfer, clear procedures and practical mentoring are now a significant part of how I work. I continue to invest in constant study and upskilling, with the goal of contributing to solid technical projects while sharing knowledge effectively.</p>
+            
+            <p><strong>Alongside 20+ years of hands-on field experience, I have consistently invested in formal education and certifications (including LPIC-2 and CCNA), earning two technical diplomas—the latest in Computer Science, achieved with 100/100 and highest honors.</strong></p>
+
+            <div class="pgp-key">OpenPGP: 0x5886AF6DAA78F9D0</div>
+        </section>
+
+        <!-- Core Stack Section -->
+        <section id="stack">
+            <h3>Core Stack</h3>
+            <ul>
+                <li><strong>Operating Systems & Virtualization:</strong> Linux Enterprise (Debian, Ubuntu, CentOS, RHEL, BSD), POSIX, Proxmox VE.</li>
+                <li><strong>Networking & Security:</strong> Cisco CCNA routing and switching, firewalling (pfSense, Sophos, Fortinet, Mikrotik), anti-ransomware strategies & Veeam backups.</li>
+                <li><strong>Automation & Scripting:</strong> Bash, Python, internal tool development, configuration management (Ansible).</li>
+                <li><strong>IT/OT Integration:</strong> Linux Embedded, Yocto Project, ARM architecture, industrial protocols (OPC-UA).</li>
+            </ul>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h3>Key Experience</h3>
+            
+            <div class="experience-item">
+                <div class="experience-title">Linux Embedded Systems Specialist & System Administrator</div>
+                <div class="experience-meta">QEM Srl | 3 years, 10 months</div>
+                <p>Managed and optimized Linux Embedded infrastructures (Yocto, Debian) and integrated OT industrial networks. Provided technical mentoring for the development team, managed version control (Git), and maintained technical documentation.</p>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-title">IT Manager & System Administrator</div>
+                <div class="experience-meta">Casaforte Self Storage | 9 years, 3 months</div>
+                <p>Managed network and server infrastructure, perimeter security (Sophos XG, pfSense), virtualization, and business continuity across multiple locations.</p>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-title">IT Consultant & Network Administrator</div>
+                <div class="experience-meta">Radiodenis Informatica | 5 years, 10 months</div>
+                <p>Deployed and maintained Debian and CentOS servers, Fortinet firewalls, and Mikrotik/Ubiquiti networking appliances for HiperLAN connectivity.</p>
+            </div>
+        </section>
+
+        <!-- Education & Certifications Section -->
+        <section id="education">
+            <h3>Education & Certifications</h3>
+            <ul>
+                <li><strong>LPI LPIC-2</strong> | Certified Linux Engineer</li>
+                <li><strong>LPI LPIC-1</strong> | Certified Linux Administrator</li>
+                <li><strong>Cisco CCNA</strong> | Routing and Switching</li>
+                <li><strong>Diploma in Computer Science and Telecommunications</strong> | I.T.I.S. "Carlo Zuccante" (Score: 100/100 <em>cum laude</em>, Official Commendation by the City of Venice)</li>
+                <li><strong>Diploma in Electronics and Electrotechnics</strong> | I.T.I.S. "Alessandro Rossi" (Score: 100/100)</li>
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Denis. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
