@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="wsuser - Senior ICT Specialist & Infrastructure Lead Portfolio">
+    <meta name="description" content="Senior ICT Specialist & Infrastructure Lead Portfolio">
     <title>Denis | Senior ICT Specialist</title>
+    
+    <!-- FontAwesome CDN for vector icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <style>
         /* Base configuration and dark theme */
         :root {
-            --bg-color: #1e1e1e;
-            --text-primary: #cccccc;
-            --accent-color: #4da6ff;
-            --container-bg: #252526;
-            --border-color: #333333;
-            --font-main: "Consolas", "Courier New", monospace;
+            --bg-color: #181818;
+            --container-bg: #242424;
+            --text-primary: #ff8b3d;
+            --accent-color: #9d4edd;
+            --border-color: #5a189a;
+            --font-main: ui-monospace, "SFMono-Regular", "Menlo", "Monaco", monospace;
         }
 
         * {
@@ -40,7 +44,7 @@
         }
 
         h1, h2, h3, h4 {
-            color: #ffffff;
+            color: var(--accent-color);
         }
 
         h1 {
@@ -98,6 +102,37 @@
             font-size: 0.85rem;
             color: var(--accent-color);
             margin-bottom: 8px;
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        /* Custom link styling matching the theme */
+        a {
+            color: var(--text-primary);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--accent-color);
+            transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+        }
+
+        a:hover, a:focus {
+            color: var(--accent-color);
+            border-bottom: 1px solid var(--text-primary);
+        }
+
+        /* Specific styling for meta links (videos, wikis) */
+        .project-meta a {
+            color: var(--accent-color);
+            border-bottom: 1px dashed var(--text-primary);
+        }
+
+        .project-meta a:hover, .project-meta a:focus {
+            color: var(--text-primary);
+            border-bottom: 1px solid var(--accent-color);
+        }
+
+        /* Icon spacing */
+        i.fab, i.fas {
+            margin-right: 6px;
         }
     </style>
 </head>
@@ -105,7 +140,7 @@
     <div class="container">
         <header>
             <h1>Denis</h1>
-            <h2 class="headline">Senior ICT Specialist & Infrastructure Lead | LPIC-2 & CCNA</h2>
+            <h2 class="headline">Senior ICT Specialist & Infrastructure Lead | 🐧 LPIC-2 & CCNA</h2>
         </header>
 
         <section id="about">
@@ -113,7 +148,7 @@
             <p>At the core of my work there is a mindset that has guided me from the beginning: just for fun. Curiosity to understand how systems behave, why they fail, and how to make them reliable has shaped my professional path.</p>
             <p>I am an ICT professional with broad experience in system administration, networking, security and industrial integration. My career developed in small and medium-sized environments where autonomy, diagnostic capability and full lifecycle management of technical systems are essential.</p>
             <p>Over time, I expanded my competencies into embedded Linux systems (Yocto, ARM) and PLC programming, building a practical understanding of how IT, OT and industrial automation interact.</p>
-            <p>Alongside 20+ years of hands-on field experience, I have consistently invested in formal education and certifications (including LPIC-2 and CCNA), earning two technical diplomas—the latest in Computer Science, achieved with 100/100 and highest honors.</p>
+            <p>Alongside 20+ years of hands-on field experience, I have consistently invested in formal education and certifications (including LPIC-2 and CCNA), earning two technical diplomas, the latest in Computer Science, achieved with 100/100 and highest honors.</p>
             <div class="pgp-key">OpenPGP: 0x5886AF6DAA78F9D0</div>
         </section>
 
@@ -121,27 +156,31 @@
             <h3>GitHub Showcase</h3>
             
             <div class="project-item">
-                <div class="project-title">RadioFlutter - Cross-Platform Portfolio App</div>
-                <div class="project-meta">Apr 2026 - Present | Git, Technical Documentation</div>
-                <p>Cross-platform Flutter portfolio application developed to showcase ICT infrastructure projects, networking laboratories, and web environments.</p>
-            </div>
-
-            <div class="project-item">
-                <div class="project-title">RADIOSHOP - Full-Stack E-Commerce</div>
-                <div class="project-meta">Feb 2026 - Present | PHP, MariaDB, MVC, Git</div>
-                <p>Full-stack e-commerce platform developed using PHP, MariaDB, and MVC architecture principles.</p>
-            </div>
-
-            <div class="project-item">
-                <div class="project-title">RADIONET - Didactic Network Infrastructure Lab</div>
+                <div class="project-title"><a href="https://github.com/ddritis/radionet"><i class="fab fa-github"></i>RADIONET - Didactic Network Infrastructure Lab</a></div>
                 <div class="project-meta">Jan 2026 - Apr 2026 | Network Administration, Mikrotik</div>
                 <p>Network infrastructure laboratory setup detailing administration procedures and Mikrotik routing implementations.</p>
             </div>
-
+            
             <div class="project-item">
-                <div class="project-title">PLC-Based Industrial Automation Panel</div>
+                <div class="project-title"><a href="https://github.com/ddritis/radioshop"><i class="fab fa-github"></i>RADIOSHOP - Full-Stack E-Commerce</a></div>
+                <div class="project-meta"><a href="https://github.com/ddritis/radioshop/wiki"><i class="fab fa-github"></i>Wiki</a></div>
+                <div class="project-meta"><a href="https://youtu.be/BOSEFvDKZVw"><i class="fab fa-youtube"></i>video</a></div>
+                <div class="project-meta"><a href="https://youtu.be/-ijrqz_uNQ4"><i class="fab fa-youtube"></i>related video</a></div>
+                <div class="project-meta">Feb 2026 - Present | PHP, MariaDB, MVC, Git</div>
+                <p>Full-stack e-commerce platform developed using PHP, MariaDB, and MVC architecture principles.</p>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-title"><a href="https://github.com/ddritis/capolavori/blob/main/files/elaborato_tecnico_Dal_Ronco_Denis_5SA_Zuccante_IoT-PLC.pdf"><i class="fab fa-github"></i>PLC-Based Industrial Automation Panel</a></div>
+                <div class="project-meta"><a href="https://youtu.be/4lhG5flScW4"><i class="fab fa-youtube"></i>video</a></div>
                 <div class="project-meta">Sep 2020 - Jun 2021 | Python, System Administration</div>
                 <p>Industrial automation panel developed for hands-on training, testing, and industrial control logic simulation.</p>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title"><a href="https://github.com/ddritis/radioflutter"><i class="fab fa-github"></i>RadioFlutter - Cross-Platform Portfolio App</a></div>
+                <div class="project-meta">Apr 2026 - Present | Git, Technical Documentation</div>
+                <p>Cross-platform Flutter portfolio application developed to showcase ICT infrastructure projects, networking laboratories, and web environments.</p>
             </div>
         </section>
     </div>
