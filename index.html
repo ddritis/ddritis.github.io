@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Denis - Senior ICT Specialist & Infrastructure Lead Portfolio">
+    <meta name="description" content="wsuser - Senior ICT Specialist & Infrastructure Lead Portfolio">
     <title>Denis | Senior ICT Specialist</title>
     <style>
-        /* CSS Variables for consistent theming */
+        /* Base configuration and dark theme */
         :root {
-            --bg-color: #f4f5f7;
-            --text-primary: #333333;
-            --text-secondary: #555555;
-            --accent-color: #0056b3;
-            --container-bg: #ffffff;
-            --border-color: #dddddd;
-            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --bg-color: #1e1e1e;
+            --text-primary: #cccccc;
+            --accent-color: #4da6ff;
+            --container-bg: #252526;
+            --border-color: #333333;
+            --font-main: "Consolas", "Courier New", monospace;
         }
 
-        /* Basic Reset */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -32,185 +30,120 @@
             padding: 20px;
         }
 
-        /* Main Container */
         .container {
             max-width: 900px;
             margin: 0 auto;
             background-color: var(--container-bg);
             padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
         }
 
-        /* Typography */
+        h1, h2, h3, h4 {
+            color: #ffffff;
+        }
+
         h1 {
-            font-size: 2.5rem;
-            color: var(--text-primary);
+            font-size: 2rem;
             margin-bottom: 5px;
         }
 
         h2.headline {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--accent-color);
-            font-weight: 500;
             margin-bottom: 30px;
-            border-bottom: 2px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
             padding-bottom: 15px;
         }
 
         h3 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-top: 30px;
             margin-bottom: 15px;
-            color: var(--text-primary);
+            border-bottom: 1px dashed var(--border-color);
+            display: inline-block;
         }
-
+        
         p {
             margin-bottom: 15px;
-            color: var(--text-secondary);
             text-align: justify;
         }
 
-        /* Lists and layout */
-        ul {
-            list-style-type: none;
-            margin-bottom: 20px;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        ul li::before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: var(--accent-color);
-        }
-
-        /* Specific sections */
         .pgp-key {
-            background-color: var(--bg-color);
-            padding: 10px 15px;
-            border-left: 4px solid var(--accent-color);
-            font-family: monospace;
-            font-size: 0.95rem;
-            margin-top: 20px;
+            background-color: #000000;
+            padding: 10px;
+            border-left: 3px solid var(--accent-color);
+            font-size: 0.9rem;
+            margin-top: 10px;
             display: inline-block;
         }
 
-        .experience-item {
-            margin-bottom: 20px;
+        /* Projects section styling */
+        .project-item {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
         }
 
-        .experience-title {
+        .project-item:last-child {
+            border-bottom: none;
+        }
+
+        .project-title {
             font-weight: bold;
-            color: var(--text-primary);
+            font-size: 1.1rem;
         }
 
-        .experience-meta {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            font-style: italic;
-        }
-
-        footer {
-            margin-top: 40px;
-            text-align: center;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            border-top: 1px solid var(--border-color);
-            padding-top: 20px;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px;
-            }
-            h1 {
-                font-size: 2rem;
-            }
+        .project-meta {
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            margin-bottom: 8px;
         }
     </style>
 </head>
 <body>
-
     <div class="container">
-        <!-- Header Section -->
         <header>
             <h1>Denis</h1>
-            <h2 class="headline">Senior ICT Specialist & Infrastructure Lead | LPIC-2 & CCNA | Systems & Security Management</h2>
+            <h2 class="headline">Senior ICT Specialist & Infrastructure Lead | LPIC-2 & CCNA</h2>
         </header>
 
-        <!-- About Section -->
         <section id="about">
-            <p>At the core of my work there is a mindset that has guided me from the beginning: <em>just for fun</em>. Curiosity to understand how systems behave, why they fail, and how to make them reliable has shaped my professional path.</p>
-            
+            <h3>About</h3>
+            <p>At the core of my work there is a mindset that has guided me from the beginning: just for fun. Curiosity to understand how systems behave, why they fail, and how to make them reliable has shaped my professional path.</p>
             <p>I am an ICT professional with broad experience in system administration, networking, security and industrial integration. My career developed in small and medium-sized environments where autonomy, diagnostic capability and full lifecycle management of technical systems are essential.</p>
-            
-            <p>Over time, I expanded my competencies into embedded Linux systems (Yocto, ARM) and PLC programming, building a practical understanding of how IT, OT and industrial automation interact. I am comfortable analyzing technical architectures, stabilizing complex environments and designing reliable solutions with a strong focus on operational continuity.</p>
-            
-            <p>In recent years, I also discovered a strong inclination for technical training: explaining complex concepts, supporting new technicians and making internal system logic understandable have become a natural part of my professional profile. Knowledge transfer, clear procedures and practical mentoring are now a significant part of how I work. I continue to invest in constant study and upskilling, with the goal of contributing to solid technical projects while sharing knowledge effectively.</p>
-            
-            <p><strong>Alongside 20+ years of hands-on field experience, I have consistently invested in formal education and certifications (including LPIC-2 and CCNA), earning two technical diplomas—the latest in Computer Science, achieved with 100/100 and highest honors.</strong></p>
-
+            <p>Over time, I expanded my competencies into embedded Linux systems (Yocto, ARM) and PLC programming, building a practical understanding of how IT, OT and industrial automation interact.</p>
+            <p>Alongside 20+ years of hands-on field experience, I have consistently invested in formal education and certifications (including LPIC-2 and CCNA), earning two technical diplomas—the latest in Computer Science, achieved with 100/100 and highest honors.</p>
             <div class="pgp-key">OpenPGP: 0x5886AF6DAA78F9D0</div>
         </section>
 
-        <!-- Core Stack Section -->
-        <section id="stack">
-            <h3>Core Stack</h3>
-            <ul>
-                <li><strong>Operating Systems & Virtualization:</strong> Linux Enterprise (Debian, Ubuntu, CentOS, RHEL, BSD), POSIX, Proxmox VE.</li>
-                <li><strong>Networking & Security:</strong> Cisco CCNA routing and switching, firewalling (pfSense, Sophos, Fortinet, Mikrotik), anti-ransomware strategies & Veeam backups.</li>
-                <li><strong>Automation & Scripting:</strong> Bash, Python, internal tool development, configuration management (Ansible).</li>
-                <li><strong>IT/OT Integration:</strong> Linux Embedded, Yocto Project, ARM architecture, industrial protocols (OPC-UA).</li>
-            </ul>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience">
-            <h3>Key Experience</h3>
+        <section id="projects">
+            <h3>GitHub Showcase</h3>
             
-            <div class="experience-item">
-                <div class="experience-title">Linux Embedded Systems Specialist & System Administrator</div>
-                <div class="experience-meta">QEM Srl | 3 years, 10 months</div>
-                <p>Managed and optimized Linux Embedded infrastructures (Yocto, Debian) and integrated OT industrial networks. Provided technical mentoring for the development team, managed version control (Git), and maintained technical documentation.</p>
+            <div class="project-item">
+                <div class="project-title">RadioFlutter - Cross-Platform Portfolio App</div>
+                <div class="project-meta">Apr 2026 - Present | Git, Technical Documentation</div>
+                <p>Cross-platform Flutter portfolio application developed to showcase ICT infrastructure projects, networking laboratories, and web environments.</p>
             </div>
 
-            <div class="experience-item">
-                <div class="experience-title">IT Manager & System Administrator</div>
-                <div class="experience-meta">Casaforte Self Storage | 9 years, 3 months</div>
-                <p>Managed network and server infrastructure, perimeter security (Sophos XG, pfSense), virtualization, and business continuity across multiple locations.</p>
+            <div class="project-item">
+                <div class="project-title">RADIOSHOP - Full-Stack E-Commerce</div>
+                <div class="project-meta">Feb 2026 - Present | PHP, MariaDB, MVC, Git</div>
+                <p>Full-stack e-commerce platform developed using PHP, MariaDB, and MVC architecture principles.</p>
             </div>
 
-            <div class="experience-item">
-                <div class="experience-title">IT Consultant & Network Administrator</div>
-                <div class="experience-meta">Radiodenis Informatica | 5 years, 10 months</div>
-                <p>Deployed and maintained Debian and CentOS servers, Fortinet firewalls, and Mikrotik/Ubiquiti networking appliances for HiperLAN connectivity.</p>
+            <div class="project-item">
+                <div class="project-title">RADIONET - Didactic Network Infrastructure Lab</div>
+                <div class="project-meta">Jan 2026 - Apr 2026 | Network Administration, Mikrotik</div>
+                <p>Network infrastructure laboratory setup detailing administration procedures and Mikrotik routing implementations.</p>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">PLC-Based Industrial Automation Panel</div>
+                <div class="project-meta">Sep 2020 - Jun 2021 | Python, System Administration</div>
+                <p>Industrial automation panel developed for hands-on training, testing, and industrial control logic simulation.</p>
             </div>
         </section>
-
-        <!-- Education & Certifications Section -->
-        <section id="education">
-            <h3>Education & Certifications</h3>
-            <ul>
-                <li><strong>LPI LPIC-2</strong> | Certified Linux Engineer</li>
-                <li><strong>LPI LPIC-1</strong> | Certified Linux Administrator</li>
-                <li><strong>Cisco CCNA</strong> | Routing and Switching</li>
-                <li><strong>Diploma in Computer Science and Telecommunications</strong> | I.T.I.S. "Carlo Zuccante" (Score: 100/100 <em>cum laude</em>, Official Commendation by the City of Venice)</li>
-                <li><strong>Diploma in Electronics and Electrotechnics</strong> | I.T.I.S. "Alessandro Rossi" (Score: 100/100)</li>
-            </ul>
-        </section>
-
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2026 Denis. All rights reserved.</p>
-        </footer>
     </div>
-
 </body>
 </html>
