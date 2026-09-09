@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
-        /* Base configuration and balanced dark theme */
+        /* Base configuration and Sun Microsystems Java light theme */
         :root {
-            --bg-color: #181818;
-            --container-bg: #242424;
-            --text-primary: #ff8b3d;
-            --accent-color: #9d4edd;
-            --border-color: #5a189a;
+            --bg-color: #f4f5f7;        /* Light paper background */
+            --container-bg: #ffffff;    /* Pure white container */
+            --text-primary: #2b2b2b;    /* High contrast dark slate */
+            --accent-color: #DE2A2D;    /* Classic Sun Java Red */
+            --brand-blue: #3654A6;      /* Classic Sun Java Blue */
+            --border-color: #d1d5db;    /* Soft gray for structural borders */
             --font-main: ui-monospace, "SFMono-Regular", "Menlo", "Monaco", monospace;
         }
 
@@ -41,10 +42,11 @@
             padding: 40px;
             border-radius: 4px;
             border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
 
-        h1, h2, h3, h4 {
-            color: var(--accent-color);
+        h1, h3, h4 {
+            color: var(--brand-blue);
         }
 
         h1 {
@@ -64,13 +66,49 @@
             font-size: 1.3rem;
             margin-top: 30px;
             margin-bottom: 15px;
-            border-bottom: 1px dashed var(--border-color);
+            border-bottom: 1px dashed var(--brand-blue);
             display: inline-block;
         }
         
         p {
             margin-bottom: 15px;
             text-align: justify;
+        }
+
+        /* About section layout */
+        .about-layout {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image {
+            flex-shrink: 0;
+            width: 260px;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+            display: block;
+        }
+
+        /* Responsive behavior for About section */
+        @media (max-width: 768px) {
+            .about-layout {
+                flex-direction: column-reverse;
+            }
+            .about-image {
+                width: 100%;
+                max-width: 280px;
+                margin: 0 auto 20px auto;
+            }
         }
 
         /* Certifications list styling */
@@ -85,18 +123,20 @@
         }
 
         ul li i {
-            color: var(--accent-color);
+            color: var(--brand-blue);
             width: 25px;
             text-align: center;
         }
 
         .pgp-key {
-            background-color: #000000;
+            background-color: #f8f9fa;
+            color: var(--text-primary);
             padding: 10px;
             border-left: 3px solid var(--accent-color);
             font-size: 0.9rem;
             margin-top: 10px;
             display: inline-block;
+            border-radius: 2px;
         }
 
         /* Projects section styling */
@@ -117,7 +157,7 @@
 
         .project-meta {
             font-size: 0.85rem;
-            color: var(--accent-color);
+            color: var(--brand-blue);
             margin-bottom: 8px;
             display: inline-block;
             margin-right: 15px;
@@ -125,26 +165,26 @@
 
         /* Custom link styling matching the theme */
         a {
-            color: var(--text-primary);
+            color: var(--accent-color);
             text-decoration: none;
-            border-bottom: 1px dashed var(--accent-color);
+            border-bottom: 1px dashed var(--brand-blue);
             transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
         }
 
         a:hover, a:focus {
-            color: var(--accent-color);
-            border-bottom: 1px solid var(--text-primary);
+            color: var(--brand-blue);
+            border-bottom: 1px solid var(--accent-color);
         }
 
         /* Specific styling for meta links (videos, wikis) */
         .project-meta a {
-            color: var(--accent-color);
-            border-bottom: 1px dashed var(--text-primary);
+            color: var(--brand-blue);
+            border-bottom: 1px dashed var(--accent-color);
         }
 
         .project-meta a:hover, .project-meta a:focus {
-            color: var(--text-primary);
-            border-bottom: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            border-bottom: 1px solid var(--brand-blue);
         }
 
         /* Icon spacing */
@@ -162,11 +202,18 @@
 
         <section id="about">
             <h3>About</h3>
-            <p>At the core of my work there is a mindset that has guided me from the beginning: just for fun. Curiosity to understand how systems behave, why they fail, and how to make them reliable has shaped my professional path.</p>
-            <p>I am an ICT professional with broad experience in Linux and Unix system administration, networking, security, and industrial integration. My career developed in small and medium-sized environments where autonomy, diagnostic capability and full lifecycle management of technical systems are essential.</p>
-            <p>Over time, I expanded my competencies into embedded Linux systems (Yocto, ARM) and PLC programming, building a practical understanding of how IT, OT and industrial automation interact.</p>
-            <p>Alongside 20+ years of hands-on field experience, I have consistently invested in formal education and certifications (including LPIC-2, LPI BSD Specialist, and CCNA), earning two technical diplomas—the latest in Computer Science, achieved with 100/100 and highest honors.</p>
-            <div class="pgp-key">OpenPGP: 0x5886AF6DAA78F9D0</div>
+            <div class="about-layout">
+                <div class="about-text">
+                    <p>At the core of my work there is a mindset that has guided me from the beginning: just for fun. Curiosity to understand how systems behave, why they fail, and how to make them reliable has shaped my professional path.</p>
+                    <p>I am an ICT professional with broad experience in Linux and Unix system administration, networking, security, and industrial integration. My career developed in small and medium-sized environments where autonomy, diagnostic capability and full lifecycle management of technical systems are essential.</p>
+                    <p>Over time, I expanded my competencies into embedded Linux systems (Yocto, ARM) and PLC programming, building a practical understanding of how IT, OT and industrial automation interact.</p>
+                    <p>Alongside 20+ years of hands-on field experience, I have consistently invested in formal education and certifications (including LPIC-2, LPI BSD Specialist, and CCNA), earning two technical diplomas—the latest in Computer Science, achieved with 100/100 and highest honors.</p>
+                    <div class="pgp-key">OpenPGP: 0x5886AF6DAA78F9D0</div>
+                </div>
+                <div class="about-image">
+                    <img src="assets/images/photo_01.jpg" alt="Denis - ICT Specialist & System Administrator">
+                </div>
+            </div>
         </section>
 
         <section id="certifications">
